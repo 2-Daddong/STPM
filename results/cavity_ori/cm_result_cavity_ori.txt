@@ -1,0 +1,21 @@
+============[seed=100] Class: cavity_ori============
+train data: 109 || valid data: 27 || test data: 281 
+TP: 244, TN: 3, FP: 33, FN: 1
+Accuracy: 0.8790035587188612
+image ROCAUC: 0.711 
+cls_threshold: 0.722 
+
+============[seed=100] Class: cavity_ori============
+train data: 109 || valid data: 27 || test data: 281 
+TP: 244, TN: 3, FP: 33, FN: 1
+Accuracy: 0.8790035587188612
+image ROCAUC: 0.711 
+cls_threshold: 0.722 
+
+============[seed=100] Class: cavity_ori============
+train data: 109 || valid data: 27 || test data: 281 
+TP: 244, TN: 3, FP: 33, FN: 1
+Accuracy: 0.8790035587188612
+image ROCAUC: 0.711 
+cls_threshold: 0.722 
+
