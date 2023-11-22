@@ -1,5 +1,9 @@
 import os
 from PIL import Image, ImageFilter
+try:
+    from PIL.Image import LANCZOS as ANTIALIAS
+except ImportError:
+    from PIL.Image import ANTIALIAS as ANTIALIAS
 import torch
 from torch.utils.data import Dataset
 from torchvision import transforms as T
@@ -25,10 +29,10 @@ class CustomDataset(Dataset):
 		# load dataset
 		self.x, self.y = self.load_dataset_folder()
 
-		self.transform_x = T.Compose([#T.Resize(self.resize, Image.ANTIALIAS),
+		self.transform_x = T.Compose([#T.Resize(self.resize, ANTIALIAS),
 										#T.CenterCrop(self.cropsize),
 										#T.Pad(self.pad),
-										T.Resize(self.inputsize, Image.ANTIALIAS),
+										T.Resize(self.inputsize, ANTIALIAS),
 										T.ToTensor(),
 										T.Normalize(mean=[0.485, 0.456, 0.406],
 													std=[0.229, 0.224, 0.225])])

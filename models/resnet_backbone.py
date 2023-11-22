@@ -1,9 +1,16 @@
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-#from torch.hub import load_state_dict_from_url
-from torchvision.models.utils import load_state_dict_from_url
-from torchvision.models.resnet import model_urls, conv3x3, conv1x1, BasicBlock, Bottleneck
+try:
+    from torch.hub import load_state_dict_from_url
+except ImportError:
+    from torch.utils.model_zoo import load_url as load_state_dict_from_rul
+# from torchvision.models.utils import load_state_dict_from_url
+try:
+    from torchvision.models.resnet import model_urls, conv1x1, BasicBlock, Bottleneck
+except ImportError:
+    from torchvision.models.resnet import conv1x1
+    from torchvision.models.video.resnet import model_urls, BasicBlock, Bottleneck
 
 class ModifiedResNet(nn.Module):
     def __init__(self, block, layers, num_classes=1000, zero_init_residual=False,
