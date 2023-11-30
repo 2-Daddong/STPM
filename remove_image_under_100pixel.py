@@ -14,7 +14,7 @@ def check_and_delete_images(folder_path):
                 try:
                     with Image.open(os.path.join(root, file)) as img:
                         width, height = img.size
-                        if width * height < 100:
+                        if min(width, height) < 100:
                             print(f"Image {file} is smaller than 100 pixels in {root}")
                             # answer = input("%s, %s\nY/N you want remove?"%(width*height, file))
                             answer = True
