@@ -1,0 +1,7 @@
+============[seed=100] Class: cavity============
+train data: 515 || valid data: 128 || test data: 639 
+TP: 589, TN: 1, FP: 48, FN: 1
+Accuracy: 0.9233176838810642
+image ROCAUC: 0.695 
+cls_threshold: 0.386 
+
