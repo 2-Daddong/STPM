@@ -1,8 +1,8 @@
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-#from torch.hub import load_state_dict_from_url
-from torchvision.models.utils import load_state_dict_from_url
+from torch.hub import load_state_dict_from_url
+# from torchvision.models.utils import load_state_dict_from_url
 from torchvision.models.resnet import model_urls, conv3x3, conv1x1, BasicBlock, Bottleneck
 
 class ModifiedResNet(nn.Module):
